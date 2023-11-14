@@ -16,7 +16,7 @@ import certifi
 
 class TestcaseGenerator:
 
-    def __init__(self, pat, org_url='https://czprga99034srv.ad001.siemens.net:8446/DefaultCollection/',
+    def __init__(self, pat, org_url='<ORG_URL>',
                  save_path=str(os.getcwd())):
         super().__init__()
         self.PAT = pat
@@ -435,8 +435,8 @@ class TestcaseGenerator:
     #  ---------- Runners ------------
     def generate_overview(self, plan="", file_name=""):
         """
-        Generates overview of testplan
-        :param plan: Name/ID of testplan
+        Generates overview of test plan
+        :param plan: Name/ID of test plan
         :param file_name: str - file to save in
         :return: 0/1 success/failed
         """
@@ -468,7 +468,7 @@ class TestcaseGenerator:
     def generate_full_report(self, plan="", suite="", testcase="", file_name=""):
         """
         Generates full report for the specified range
-        :param plan: Name/ID of testplan
+        :param plan: Name/ID of test plan
         :param suite: Name/ID of test suite
         :param testcase: Name/ID of test case
         :param file_name: str - file to save in
@@ -507,10 +507,10 @@ class TestcaseGenerator:
 
 if __name__ == "__main__":
     PAT = '<PAT>'
-    ORG_URL = 'https://czprga99034srv.ad001.siemens.net:8446/DefaultCollection/'
+    ORG_URL = '<ORG_URL>'
     gen = TestcaseGenerator(PAT, ORG_URL, save_path=str(os.getcwd()))
 
-    ret_over = gen.generate_overview(plan="ET 200AL IO-Link DIQ4-DQ4 Test Plan", file_name="objover")
-    ret_full = gen.generate_full_report(plan="ET 200AL IO-Link DIQ4-DQ4 Test Plan", file_name="fullobj")
+    ret_over = gen.generate_overview(plan="<test plan name>", file_name="objover")
+    ret_full = gen.generate_full_report(plan="<test plan name>", file_name="fullobj")
     print("Overview: {}".format("successful" if ret_over == 0 else "failed"))
     print("Full report: {}".format("successful" if ret_full == 0 else "failed"))

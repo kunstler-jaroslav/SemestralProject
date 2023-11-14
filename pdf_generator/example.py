@@ -20,12 +20,12 @@ def run_backlog():
 
 
 def run_testcase():
-    PAT = '3t47soint3lnek3blilcrpgeelrbgfvv5lrw4iswfeavpqbe7x7q'
-    ORG_URL = 'https://czprga99034srv.ad001.siemens.net:8446/DefaultCollection/'
+    PAT = '<PAT>'
+    ORG_URL = '<ORG_URL>'
     gen = TestcaseGenerator(PAT, ORG_URL, save_path=str(os.getcwd()))
 
-    ret_over = gen.generate_overview(plan="ET 200AL IO-Link DIQ4-DQ4 Test Plan", file_name="report_overview")
-    ret_full = gen.generate_full_report(plan="ET 200AL IO-Link DIQ4-DQ4 Test Plan", file_name="report_full")
+    ret_over = gen.generate_overview(plan="<Name>", file_name="report_overview")
+    ret_full = gen.generate_full_report(plan="<Name>", file_name="report_full")
 
     # Results
     print("Overview: {}".format("successful" if ret_over == 0 else "failed"))

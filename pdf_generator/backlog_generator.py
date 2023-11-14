@@ -223,14 +223,10 @@ class BacklogGenerator:
 
 if __name__ == "__main__":
     PAT = "<PAT>"
-    ORG_URL = 'https://czprga99034srv.ad001.siemens.net:8446/DefaultCollection/'
-    generator = BacklogGenerator(PAT, ORG_URL, save_path=str(os.getcwd()), project='DistributedIO',
-                                 team="MF Stack Development")
+    ORG_URL = '<ORG_URL>'
+    generator = BacklogGenerator(PAT, ORG_URL, save_path=str(os.getcwd()), project='<Project name>',
+                                 team="<Team name>")
 
     # Works only for types Epic, Feature, Task - reason unknown
     generator.get_items_of_type(WorkItemType.Bug, "backlog_bug")
 
-    # Works for any type(s)
-    # generator.get_hierarchy(39733, work_item_types=[WorkItemType.Epic, WorkItemType.Feature, WorkItemType.Bug], filename='Bug_hierarchy')
-
-    # Feel free to specify other WorkItemType values in class WorkItemType
