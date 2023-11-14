@@ -1,0 +1,46 @@
+<html>
+<style>
+body {
+  font-family: Arial;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+<canvas id="passRate" style="width:100%;max-width:400px"></canvas>
+
+<script>
+    var passLabs = ["Passed", "Failed", "Not applicable", "Blocked", "Unspecified", "Other"];
+var passData = [{{passed}}, {{failed}}, {{notapplicable}}, {{blocked}}, {{unspecified}}, {{other}}];
+var passColors = [
+  "#6bb03f",
+  "#d13636",
+  "#f5ae4c",
+  "#6e9eff",
+  "#fff58c",
+  "#bababa"
+];
+
+new Chart("passRate", {
+  type: "doughnut",
+  data: {
+    labels: passLabs,
+    datasets: [{
+      backgroundColor: passColors,
+      data: passData
+    }]
+  },
+  options: {
+    title: {
+      display: false,
+      text: "Pass rate"
+    },
+    legend: {
+        position: 'right',
+        maxWidth: 100
+    }
+  }
+});
+    </script>
+
+</body>
+</html>

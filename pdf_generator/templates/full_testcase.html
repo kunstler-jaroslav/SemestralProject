@@ -1,0 +1,42 @@
+<style>
+body {
+  font-family: Arial;
+}
+:root {
+    --darker: #333333;
+    --lighter: #5e5e5e;
+}
+</style>
+<p><strong><span style="color: var(--lighter);">TEST CASE:</span>
+    <span style="color: var(--darker);"><a href="{{case_link}}">{{test_case_id}}</a></span>
+    <span style="color: var(--lighter);"> -</span>&nbsp;
+    <span style="color: var(--darker);">{{test_case_name}}</span></strong></p>
+<p><span style="color: var(--lighter);"><strong>INFORMATION</strong></span></p>
+<hr />
+<table style="height: 76px; width: 100%; border-collapse: collapse;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Test Case ID:</span>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{test_case_id}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Assigned To:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{assigned_to}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">State:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{state}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 22px;"><span style="color: var(--lighter);">Automation Status:</span></td>
+<td style="width: 60%; height: 22px;"><span style="color: var(--darker);">{{automation_status}}</span></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<p><span style="color: var(--lighter);"><strong>DESCRIPTION</strong></span></p>
+<hr />
+<p>
+    {{case_description}}
+</p>

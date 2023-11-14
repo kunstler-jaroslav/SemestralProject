@@ -1,0 +1,45 @@
+<style>
+body {
+  font-family: Arial;
+}
+:root {
+    --darker: #333333;
+    --lighter: #5e5e5e;
+}
+</style>
+<p><strong><span style="color: var(--lighter); font-size: 26px;">TEST PLAN:</span>
+    <span style="color: var(--darker); font-size: 26px;">{{test_plan_id}}</span>
+    <span style="color: var(--lighter); font-size: 26px;"> -</span>&nbsp;
+    <span style="color: var(--darker); font-size: 26px;">{{test_plan_name}}</span></strong></p>
+<p><span style="color: var(--lighter);"><strong>INFORMATION</strong></span></p>
+<hr />
+<table style="height: 90px; width: 100%; border-collapse: collapse;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Test plan ID:</span>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{test_plan_id}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Owner:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{owner}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">State:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{state}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Iteration:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{iteration}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Area path:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{area_path}}</span></td>
+
+</tbody>
+</table>
+<br>
+<p><span style="color: var(--lighter);"><strong>DESCRIPTION</strong></span></p>
+<hr />
+<p>
+    {{test_plan_description}}
+</p>

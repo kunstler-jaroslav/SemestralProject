@@ -1,0 +1,31 @@
+<style>
+body {
+  font-family: Arial;
+}
+:root {
+    --darker: #333333;
+    --lighter: #5e5e5e;
+}
+</style>
+<p><strong><span style="color: var(--lighter); font-size: 22px;">TEST SUITE:</span>
+    <span style="color: var(--darker); font-size: 22px;"><a href="{{suite_link}}">{{test_suite_id}}</a></span>
+    <span style="color: var(--lighter); font-size: 22px;"> -</span>&nbsp;
+    <span style="color: var(--darker); font-size: 22px;">{{test_suite_name}}</span></strong></p>
+<p><span style="color: var(--lighter);"><strong>INFORMATION</strong></span></p>
+<hr />
+<table style="height: 58px; width: 100%; border-collapse: collapse;" border="0">
+<tbody>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Test suite ID:</span>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{test_suite_id}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Suite type:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{type}}</span></td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 40%; height: 18px;"><span style="color: var(--lighter);">Configurations:</span></td>
+<td style="width: 60%; height: 18px;"><span style="color: var(--darker);">{{configurations}}</span></td>
+
+</tbody>
+</table>
