@@ -1,5 +1,7 @@
 # Semestral project 
 
+Project in development
+
 ## KMTronic
 
 Library, that enables you to control KMTronic device the same way 
